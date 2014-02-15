@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.example"
+    version   = "0.0.1">
+
+<name>Desicion Matcher</name>
+
+<description>
+Desicion Matcher is a tool to share your opinion with others that are needing make a decision about a specific topic. 
+</description>
+
+<author href="Iconsulting Team" email="mfdogutierrez@soportegyc.com">
+Marina Vitale
+Andrea Nicoli
+Sara Aldini
+Federica Sani
+Mario Gutierrez
+</author>
+<icon src="images/logo_96.png" width="96" height="96" />
+<icon src="images/logo_72.png" width="72" height="72" />
+<icon src="images/logo_48.png" width="48" height="48" />
+<icon src="images/logo_36.png" width="36" height="36" />
+
+</widget>

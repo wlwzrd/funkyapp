@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Decision Matcher</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="themes/funky.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        
+    </head>
+
+    <body>
+
+<!--Page with SEARCH Input-->
+
+        <div data-role="page" data-theme="a" id="home">
+            <div data-role="header" data-position="inline">
+                <h1>Decision Matcher</h1>
+            </div>
+            <div data-role="content" data-theme="a" align="center">
+                <img src="images/logo_ppal.png" alt="Decision Matcher">
+            </div>
+            <div data-role="content" data-theme="a" align="center">
+                <form>
+                    <label for="searchInput">MATCH BY DECISION</label>
+                    <input type="search" id="searchInput" placeholder="Type your decision keyword..." >
+                    <script type="text/javascript">
+                    $(document).on('change', '#searchInput', function(event)
+                    {
+                    var name = $(this).val();
+                    $('#output').append('<p>' + name + '</p>');    
+                    $.mobile.changePage("#searchPage");
+                    
+                    });
+                    </script>
+                </form>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Let's Do it</h1>
+            </div>
+
+        </div>
+
+<!--Page TO DO List-->
+
+        <div data-role="page" data-theme="a" id="searchPage">
+            <div data-role="header" data-position="inline">
+                <h2>Decision Matcher</h2>
+            </div>
+            <div data-role="content" data-theme="a" align="center">
+                <h1>GET IN CONTACT</h1>
+                <img src="images/logo_mini.png" alt="Decision Matcher">
+            </div>
+            <div data-role="content" data-theme="a" align="center">
+                <a href="#friendsPage" data-theme="" id="friends"> <img src="images/btn_friends.png" ></br>Get with Friends</a>
+                <div id="output"></div>
+            </div>
+            <div data-role="content" data-theme="a" align="center">
+                <a href="http://pubnub-demo.s3.amazonaws.com/examples/mobile-chat/mobile-chat.html" data-theme="" id="matcher"> <img src="images/btn_twin.png" ></br>Decision Maker Twin</a>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <h1>Let's Do it</h1>
+            </div>
+
+        </div>
+
+
+
+    </body>
+</html>
+

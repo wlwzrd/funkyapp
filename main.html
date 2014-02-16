@@ -29,12 +29,8 @@
                     <label for="searchInput">MATCH BY DECISION</label>
                     <input type="search" id="searchInput" placeholder="Type your decision keyword..." >
                     <script type="text/javascript">
-                    $(document).on('change', '#searchInput', function(event)
-                    {
-                    var name = $(this).val();
-                    $('#output').append('<p>' + name + '</p>');    
-                    $.mobile.changePage("#searchPage");
-                    
+                    $(document).on('change', '#searchInput', function(event){
+                        $.mobile.changePage("#searchPage");
                     });
                     </script>
                 </form>
@@ -57,11 +53,11 @@
                 <img src="images/logo_mini.png" alt="Decision Matcher">
             </div>
             <div data-role="content" data-theme="a" align="center">
-                <a href="#friendsPage" data-theme="" id="friends"> <img src="images/btn_friends.png" ></br>Get with Friends</a>
+                <a href="#twinPage" data-theme="" id="friends"> <img src="images/btn_friends.png" ></br>Get with Friends</a>
                 <div id="output"></div>
             </div>
             <div data-role="content" data-theme="a" align="center">
-                <a href="http://pubnub-demo.s3.amazonaws.com/examples/mobile-chat/mobile-chat.html" data-theme="" id="matcher"> <img src="images/btn_twin.png" ></br>Decision Maker Twin</a>
+                <a href="#twinPage" data-theme="a" id="matcher"> <img src="images/btn_twin.png" ></br>Decision Maker Twin</a>
             </div>
             
             <div data-role="footer" data-position="fixed">
@@ -69,7 +65,51 @@
             </div>
 
         </div>
+<!--Page twin-->
+        <div data-role="page" data-theme="a" id="twinPage">
 
+            <div data-role="header" data-position="inline">
+                <h2>Decision Matcher</h2>
+            </div>
+
+            <div data-role="content" data-theme="a" align="center">
+                <h1>Matcher</h1>
+                <img src="images/logo_mini.png" alt="Decision Matcher">
+            </div>
+
+            <div data-role="content" data-theme="a" align="center">
+                <ul data-role="listview">
+                    <li data-icon="info"><a href="#andrea" data-transition="fade">Andrea</a></li>
+                    <li data-icon="info"><a href="#fede" data-transition="fade">Federica</a></li>
+                    <li data-icon="info"><a href="#marina" data-transition="fade">Marina</a></li>
+                    <li data-icon="info"><a href="#sara" data-transition="fade">Sara</a></li>
+                </ul>
+            </div>   
+    
+        </div>
+
+<!--Page Normal Admin-->
+
+        <div data-role="page" id="andrea">
+
+             <div data-role="header" data-position="inline">
+                <h2>Decision Matcher</h2>
+            </div>
+            <div data-role="content" align="center"><img src="http://i1352.photobucket.com/albums/q647/wlwzrd/andrea_zps9e2fac68.png" border="0" alt=" photo andrea_zps9e2fac68.png"/></div> 
+            <div data-role="content" align="center">
+                <ul data-role="listview" data-divider-theme="a" data-inset="true">
+                    <li data-role="list-divider">Mail</li>
+                    <li data-icon="info"><a href="mailto:andrea.nicoli11@gmail.com">Email:andrea.nicolli11@gmail.com</a></li>
+                    <li data-role="list-divider">Call</li>
+                    <li data-icon="info"><a href="tel:+393338382965">Phone:3338382965</a></li>
+                    <li data-icon="info"><a href="skype:andrea.nicoli11?call">Skype:andrea.nicolli11</a></li>
+                    <li data-icon="info"><a href="tel-av:+393338382965">VideoCall</a></li>
+                    
+                </ul>
+                    
+            </div>   
+    
+</div>
 
 
     </body>
